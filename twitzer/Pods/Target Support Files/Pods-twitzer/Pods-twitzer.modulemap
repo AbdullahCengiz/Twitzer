@@ -1,0 +1,6 @@
+framework module Pods_twitzer {
+  umbrella header "Pods-twitzer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3" userLabel="Root">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6A-dA-24b" userLabel="SplashImageHolder">
+                                <rect key="frame" x="255" y="255" width="90" height="90"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="SHX-W2-2a0"/>
+                                    <constraint firstAttribute="width" constant="90" id="q1m-ml-StE"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashImage" translatesAutoresizingMaskIntoConstraints="NO" id="YPs-uN-zd5" userLabel="SplashImageView">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="C2L-nQ-vZr"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ns1-bd-Ecf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u6A-dA-24b" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FNL-W2-EOh"/>
+                            <constraint firstItem="YPs-uN-zd5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GVH-oP-09B"/>
+                            <constraint firstItem="u6A-dA-24b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YyQ-pc-caF"/>
+                            <constraint firstItem="YPs-uN-zd5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qgw-KE-ahw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplashImage" width="85" height="85"/>
+    </resources>
+</document>

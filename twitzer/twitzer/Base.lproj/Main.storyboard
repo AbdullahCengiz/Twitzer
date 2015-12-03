@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--TwitzerMainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="TwitzerMainVC" customClass="TwitzerMainVC" customModule="twitzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Root">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-Wi-6Oo" userLabel="NavigationView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitzerWhite" translatesAutoresizingMaskIntoConstraints="NO" id="RTR-hp-43x" userLabel="TwitzerIcon">
+                                        <rect key="frame" x="284" y="24" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="0aU-IT-huo"/>
+                                            <constraint firstAttribute="width" constant="32" id="uwi-wf-hlf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Iyd-bO-wZ1"/>
+                                    <constraint firstItem="RTR-hp-43x" firstAttribute="top" secondItem="hQj-Wi-6Oo" secondAttribute="top" constant="24" id="fY2-Nc-HQC"/>
+                                    <constraint firstItem="RTR-hp-43x" firstAttribute="centerX" secondItem="hQj-Wi-6Oo" secondAttribute="centerX" id="yTY-a6-cKI"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="149" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaN-jW-K0t" userLabel="TwitzTableView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TwitzCell" rowHeight="120" id="acq-KJ-PIj" userLabel="TwitzTableCell" customClass="TwitzCell" customModule="twitzer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="acq-KJ-PIj" id="cwY-5V-xab" userLabel="CellRoot">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-xL-MPL" userLabel="ProfileImageView">
+                                                    <rect key="frame" x="18" y="18" width="80" height="80"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="Y6B-50-jqM"/>
+                                                        <constraint firstAttribute="width" constant="80" id="g94-dG-JES"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ProfileName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-kW-qF6" userLabel="ProfileNameLabel">
+                                                    <rect key="frame" x="114" y="18" width="109" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-  Dec 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-Q4-8dq" userLabel="DateLabel">
+                                                    <rect key="frame" x="233" y="18" width="61.5" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-Vi-krT" userLabel="TextLabel">
+                                                    <rect key="frame" x="114" y="48" width="458" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="pXh-xL-MPL" firstAttribute="leading" secondItem="cwY-5V-xab" secondAttribute="leadingMargin" constant="10" id="1Xx-3M-uEO"/>
+                                                <constraint firstItem="llJ-Vi-krT" firstAttribute="leading" secondItem="pXh-xL-MPL" secondAttribute="trailing" constant="16" id="4rv-Cr-mcN"/>
+                                                <constraint firstItem="llJ-Vi-krT" firstAttribute="top" secondItem="KZ0-kW-qF6" secondAttribute="bottom" constant="10" id="6Gl-G8-kFQ"/>
+                                                <constraint firstItem="e1h-Q4-8dq" firstAttribute="centerY" secondItem="KZ0-kW-qF6" secondAttribute="centerY" id="8Zq-gM-iwU"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="llJ-Vi-krT" secondAttribute="bottom" constant="10" id="Cz7-Er-ghc"/>
+                                                <constraint firstItem="e1h-Q4-8dq" firstAttribute="leading" secondItem="KZ0-kW-qF6" secondAttribute="trailing" constant="10" id="HeY-PH-KVA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pXh-xL-MPL" secondAttribute="bottom" priority="400" constant="13" id="NQZ-ei-zB3"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KZ0-kW-qF6" secondAttribute="trailing" constant="80" id="T0S-da-0A9"/>
+                                                <constraint firstItem="KZ0-kW-qF6" firstAttribute="top" secondItem="pXh-xL-MPL" secondAttribute="top" id="V2a-gF-NJc"/>
+                                                <constraint firstItem="llJ-Vi-krT" firstAttribute="leading" secondItem="cwY-5V-xab" secondAttribute="leadingMargin" constant="16" id="Vdu-wZ-MI7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="llJ-Vi-krT" secondAttribute="trailing" constant="20" id="Vws-3g-aAL"/>
+                                                <constraint firstItem="pXh-xL-MPL" firstAttribute="top" secondItem="cwY-5V-xab" secondAttribute="topMargin" constant="10" id="WA1-Vd-TSr"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="e1h-Q4-8dq" secondAttribute="trailing" priority="100" constant="16" id="aj6-2l-IIx"/>
+                                                <constraint firstItem="KZ0-kW-qF6" firstAttribute="leading" secondItem="pXh-xL-MPL" secondAttribute="trailing" constant="16" id="ysf-w9-P2a"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="e1h-Q4-8dq" secondAttribute="trailing" constant="287.5" id="zSr-il-tQn"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Vdu-wZ-MI7"/>
+                                                    <exclude reference="zSr-il-tQn"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="twitzDateLabel" destination="e1h-Q4-8dq" id="aYo-ho-jxu"/>
+                                            <outlet property="twitzProfileImageView" destination="pXh-xL-MPL" id="OLo-dn-QTE"/>
+                                            <outlet property="twitzProfileNameLabel" destination="KZ0-kW-qF6" id="2VR-Jr-rtT"/>
+                                            <outlet property="twitzTextLabel" destination="llJ-Vi-krT" id="dIe-ax-zwd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5O9-sq-E2U" userLabel="SplashView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-Jt-WyY" userLabel="SplahImageOverlay">
+                                        <rect key="frame" x="255" y="255" width="90" height="90"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="OCT-HA-JeV"/>
+                                            <constraint firstAttribute="width" constant="90" id="gOQ-2D-fE0"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashImage" translatesAutoresizingMaskIntoConstraints="NO" id="K4N-7B-TTw" userLabel="SplashImageView">
+                                        <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Rv9-T8-rMu"/>
+                                            <constraint firstAttribute="width" constant="100" id="vzC-E4-GFb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="HVG-V4-RK6">
+                                        <rect key="frame" x="290" y="350" width="20" height="20"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="K4N-7B-TTw" firstAttribute="centerX" secondItem="5O9-sq-E2U" secondAttribute="centerX" id="7Oa-l0-eZM"/>
+                                    <constraint firstItem="K4N-7B-TTw" firstAttribute="centerY" secondItem="5O9-sq-E2U" secondAttribute="centerY" id="BMi-wZ-eWQ"/>
+                                    <constraint firstItem="2h1-Jt-WyY" firstAttribute="centerY" secondItem="5O9-sq-E2U" secondAttribute="centerY" id="cjF-5O-Eye"/>
+                                    <constraint firstItem="2h1-Jt-WyY" firstAttribute="centerX" secondItem="5O9-sq-E2U" secondAttribute="centerX" id="iPt-hA-5A3"/>
+                                    <constraint firstItem="HVG-V4-RK6" firstAttribute="top" secondItem="2h1-Jt-WyY" secondAttribute="bottom" constant="5" id="wKI-Td-sQo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5O9-sq-E2U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AfT-0P-DfX"/>
+                            <constraint firstItem="5O9-sq-E2U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="EWh-bs-wig"/>
+                            <constraint firstItem="yaN-jW-K0t" firstAttribute="top" secondItem="hQj-Wi-6Oo" secondAttribute="bottom" id="HS2-6g-3eA"/>
+                            <constraint firstItem="HVG-V4-RK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JV4-kI-rgm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hQj-Wi-6Oo" secondAttribute="trailing" constant="-20" id="LTt-T1-blQ"/>
+                            <constraint firstItem="5O9-sq-E2U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="PQr-ot-mcy"/>
+                            <constraint firstItem="yaN-jW-K0t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SXo-YL-C7w"/>
+                            <constraint firstItem="hQj-Wi-6Oo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bf4-KQ-Egj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yaN-jW-K0t" secondAttribute="bottom" id="rWc-Zg-uZX"/>
+                            <constraint firstItem="hQj-Wi-6Oo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="xQU-Fz-OSq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5O9-sq-E2U" secondAttribute="trailing" constant="-20" id="xuK-NG-Eq1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5O9-sq-E2U" secondAttribute="bottom" id="y4K-JP-7VY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yaN-jW-K0t" secondAttribute="trailing" constant="-20" id="zZj-ae-xVS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AfT-0P-DfX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="HVG-V4-RK6" id="bsW-OL-iTQ"/>
+                        <outlet property="splashView" destination="5O9-sq-E2U" id="ENw-q3-fdr"/>
+                        <outlet property="twitzTableView" destination="yaN-jW-K0t" id="IWH-5K-vFA"/>
+                        <outlet property="twitzerIcon" destination="RTR-hp-43x" id="S6T-Kg-flN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlaceHolder" width="298" height="298"/>
+        <image name="SplashImage" width="85" height="85"/>
+        <image name="TwitzerWhite" width="170" height="170"/>
+    </resources>
+</document>

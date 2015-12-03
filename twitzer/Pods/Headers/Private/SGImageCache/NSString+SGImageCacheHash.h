@@ -1,0 +1,1 @@
+../../../SGImageCache/NSString+SGImageCacheHash.h
